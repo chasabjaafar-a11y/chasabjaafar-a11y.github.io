@@ -1,15 +1,18 @@
-<!DOCTYPE html>
+html<!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<title>تجربة</title>
+<title>جعفر الزبيدي</title>
 <style>
-body{background:linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);color:white;text-align:center;padding:50px;font-family:Arial}
-h1{font-size:3rem}
+body{margin:0;background:linear-gradient(135deg,#1e3c72,#2a5298);color:white;text-align:center;font-family:Arial}
+.center{height:100vh;display:flex;flex-direction:column;justify-content:center}
+h1{font-size:3rem;margin:0}
 </style>
 </head>
 <body>
+<div class="center">
 <h1>جعفر الزبيدي</h1>
-<p>الخلفية الزركة اشتغلت!</p>
+<p>صفحتي اشتغلت اخيرا 🔥</p>
+</div>
 </body>
 </html>
