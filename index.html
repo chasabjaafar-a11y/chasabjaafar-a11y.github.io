@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>صفحتي</title>
+<title>صفحة جعفر الزبيدي</title>
 <style>
     * {
     margin: 0;
@@ -13,7 +13,7 @@
   }
   
   body {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4a90e2 100%);
     min-height: 100vh;
     display: flex;
     align-items: center;
@@ -24,43 +24,62 @@
   }
   
   .card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
     border-radius: 20px;
     padding: 40px 30px;
     max-width: 500px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  
+  .profile-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(255, 255, 255, 0.4);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
   }
   
   h1 {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     margin-bottom: 15px;
+    font-weight: 800;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    background: linear-gradient(90deg, #fff, #a8d8ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
   p {
     font-size: 1.2rem;
     margin-bottom: 30px;
-    opacity: 0.9;
+    opacity: 0.95;
   }
   
   .btn {
     display: block;
-    padding: 12px 30px;
+    padding: 14px 30px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
     margin-bottom: 15px;
+    font-size: 1.1rem;
   }
   
   .btn:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
   }
   
   .whatsapp {
     background: white;
-    color: #667eea;
+    color: #25d366;
   }
   
   .facebook {
@@ -71,11 +90,12 @@
 </head>
 <body>
   <div class="card">
-    <h1>اهلا بك</h1>
-    <p>هاي صفحتي الاولى على الانترنت</p>
+    <img src="https://graph.facebook.com/jaffer.alzubaday/picture?type=large" alt="صورة جعفر الزبيدي" class="profile-img">
+    <h1>جعفر الزبيدي</h1>
+    <p>هاي صفحتي الرسمية على الانترنت</p>
     
-    <a href="https://wa.me/" class="btn whatsapp">تواصل وياي واتساب</a>
-    <a href="https://facebook.com" class="btn facebook">صفحتي بالفيس</a>
+    <a href="https://wa.me/9647711076486" class="btn whatsapp">💬 تواصل وياي واتساب</a>
+    <a href="https://www.facebook.com/jaffer.alzubaday" class="btn facebook">📘 صفحتي بالفيس</a>
   </div>
 </body>
 </html>
