@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>صفحة جعفر الزبيدي</title>
+<title>تطبيق ادرس - منظم الدراسة</title>
 <style>
     * {
     margin: 0;
@@ -11,91 +11,337 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Arial, sans-serif;
   }
-  
+
   body {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #4a90e2 100%);
     min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
-    text-align: center;
     padding: 20px;
   }
-  
-  .card {
-    background: rgba(255, 255, 255, 0.12);
-    backdrop-filter: blur(12px);
-    border-radius: 20px;
-    padding: 40px 30px;
-    max-width: 500px;
-    width: 100%;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+
+ .container {
+    max-width: 600px;
+    margin: 0 auto;
   }
-  
-  .profile-img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid rgba(255, 255, 255, 0.4);
-    margin-bottom: 20px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  }
-  
+
   h1 {
-    font-size: 2.8rem;
-    margin-bottom: 15px;
-    font-weight: 800;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
     text-shadow: 0 2px 10px rgba(0,0,0,0.4);
     background: linear-gradient(90deg, #fff, #a8d8ff);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
-  p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.95;
+
+ .card {
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 25px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
   }
-  
-  .btn {
-    display: block;
-    padding: 14px 30px;
-    border-radius: 50px;
-    text-decoration: none;
+
+ .timer {
+    text-align: center;
+  }
+
+  #time {
+    font-size: 4rem;
     font-weight: bold;
-    transition: 0.3s;
-    margin-bottom: 15px;
-    font-size: 1.1rem;
+    margin: 20px 0;
+    font-family: monospace;
   }
-  
-  .btn:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+
+ .timer-btns {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
   }
-  
-  .whatsapp {
+
+  button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
     background: white;
-    color: #25d366;
+    color: #2a5298;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
   }
-  
-  .facebook {
-    background: #1877f2;
+
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+
+  input, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 10px;
+    font-size: 1rem;
+  }
+
+ .item {
+    background: rgba(255,255,255,0.1);
+    padding: 12px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+ .item button {
+    padding: 5px 12px;
+    font-size: 0.9rem;
+    background: #ff4d4d;
     color: white;
+  }
+
+ .stats {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    text-align: center;
+  }
+
+ .stat-box {
+    background: rgba(255,255,255,0.15);
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+ .stat-box h3 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+
+  h2 {
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+  }
+
+  input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
   }
 </style>
 </head>
 <body>
-  <div class="card">
-    <img src="https://graph.facebook.com/jaffer.alzubaday/picture?type=large" alt="صورة جعفر الزبيدي" class="profile-img">
-    <h1>جعفر الزبيدي</h1>
-    <p>هاي صفحتي الرسمية على الانترنت</p>
-    
-    <a href="https://wa.me/9647711076486" class="btn whatsapp">💬 تواصل وياي واتساب</a>
-    <a href="https://www.facebook.com/jaffer.alzubaday" class="btn facebook">📘 صفحتي بالفيس</a>
+  <div class="container">
+    <h1>📚 تطبيق ادرس</h1>
+
+    <!-- المؤقت -->
+    <div class="card timer">
+      <h2 id="mode">وقت الدراسة</h2>
+      <div id="time">25:00</div>
+      <div class="timer-btns">
+        <button onclick="startTimer()">ابدأ</button>
+        <button onclick="pauseTimer()">ايقاف</button>
+        <button onclick="resetTimer()">اعادة</button>
+      </div>
+      <p style="margin-top:15px">الجلسات اليوم: <span id="sessions">0</span></p>
+    </div>
+
+    <!-- المواد -->
+    <div class="card">
+      <h2>📖 المواد</h2>
+      <input type="text" id="subjectName" placeholder="اسم المادة">
+      <button onclick="addSubject()" style="width:100%">اضافة مادة</button>
+      <div id="subjectsList" style="margin-top:15px"></div>
+    </div>
+
+    <!-- المهام -->
+    <div class="card">
+      <h2>✅ المهام اليومية</h2>
+      <input type="text" id="taskName" placeholder="اضف مهمة جديدة">
+      <button onclick="addTask()" style="width:100%">اضافة مهمة</button>
+      <div id="tasksList" style="margin-top:15px"></div>
+    </div>
+
+    <!-- الاحصائيات -->
+    <div class="card">
+      <h2>📊 احصائياتك</h2>
+      <div class="stats">
+        <div class="stat-box">
+          <h3 id="todayHours">0</h3>
+          <p>ساعات اليوم</p>
+        </div>
+        <div class="stat-box">
+          <h3 id="weekHours">0</h3>
+          <p>ساعات الاسبوع</p>
+        </div>
+      </div>
+    </div>
   </div>
+
+<script>
+let timer;
+let timeLeft = 25 * 60;
+let isRunning = false;
+let isStudy = true;
+let sessions = 0;
+
+let data = JSON.parse(localStorage.getItem('studyApp')) || {
+  subjects: [],
+  tasks: [],
+  studyLog: []
+};
+
+function saveData() {
+  localStorage.setItem('studyApp', JSON.stringify(data));
+}
+
+function updateDisplay() {
+  let mins = Math.floor(timeLeft / 60);
+  let secs = timeLeft % 60;
+  document.getElementById('time').textContent =
+    `${mins.toString().padStart(2,'0')}:${secs.toString().padStart(2,'0')}`;
+}
+
+function startTimer() {
+  if (!isRunning) {
+    isRunning = true;
+    timer = setInterval(() => {
+      timeLeft--;
+      updateDisplay();
+
+      if (timeLeft <= 0) {
+        clearInterval(timer);
+        isRunning = false;
+        new Audio('data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2/LDciUFLIHO8tiJNwgZaLvt559mBz6l2/LddygGLY7X8d2JKwgZTLPj7IhYBzWH1fHdij0MN5Lh7qmCTAUJjNTw7F4lBw+ctNzu4kB2AANf7czc3xgHSxc+d7XWUGgRcwufirBElBjyj3/LZdTEGg9f/+k0YGJb2O9OAbARWhsxMFS7r3Vx8y8');
+        alert(isStudy? 'خلص وقت الدراسة! ارتاح 5 دقايق' : 'خلصت الراحة! ارجع ادرس');
+
+        if (isStudy) {
+          sessions++;
+          data.studyLog.push({date: new Date().toDateString(), minutes: 25});
+          saveData();
+        }
+
+        isStudy =!isStudy;
+        timeLeft = isStudy? 25 * 60 : 5 * 60;
+        document.getElementById('mode').textContent = isStudy? 'وقت الدراسة' : 'وقت الراحة';
+        document.getElementById('sessions').textContent = sessions;
+        updateDisplay();
+      }
+    }, 1000);
+  }
+}
+
+function pauseTimer() {
+  clearInterval(timer);
+  isRunning = false;
+}
+
+function resetTimer() {
+  clearInterval(timer);
+  isRunning = false;
+  isStudy = true;
+  timeLeft = 25 * 60;
+  document.getElementById('mode').textContent = 'وقت الدراسة';
+  updateDisplay();
+}
+
+function addSubject() {
+  let name = document.getElementById('subjectName').value.trim();
+  if (name) {
+    data.subjects.push({name: name, minutes: 0});
+    document.getElementById('subjectName').value = '';
+    saveData();
+    renderSubjects();
+  }
+}
+
+function renderSubjects() {
+  let list = document.getElementById('subjectsList');
+  list.innerHTML = '';
+  data.subjects.forEach((sub, i) => {
+    let hours = (sub.minutes / 60).toFixed(1);
+    list.innerHTML += `
+      <div class="item">
+        <span>${sub.name} - ${hours} ساعة</span>
+        <button onclick="deleteSubject(${i})">حذف</button>
+      </div>
+    `;
+  });
+}
+
+function deleteSubject(i) {
+  data.subjects.splice(i, 1);
+  saveData();
+  renderSubjects();
+}
+
+function addTask() {
+  let name = document.getElementById('taskName').value.trim();
+  if (name) {
+    data.tasks.push({name: name, done: false});
+    document.getElementById('taskName').value = '';
+    saveData();
+    renderTasks();
+  }
+}
+
+function renderTasks() {
+  let list = document.getElementById('tasksList');
+  list.innerHTML = '';
+  data.tasks.forEach((task, i) => {
+    list.innerHTML += `
+      <div class="item">
+        <label>
+          <input type="checkbox" ${task.done? 'checked' : ''} onchange="toggleTask(${i})">
+          <span style="${task.done? 'text-decoration:line-through;opacity:0.6' : ''}">${task.name}</span>
+        </label>
+        <button onclick="deleteTask(${i})">حذف</button>
+      </div>
+    `;
+  });
+}
+
+function toggleTask(i) {
+  data.tasks[i].done =!data.tasks[i].done;
+  saveData();
+  renderTasks();
+}
+
+function deleteTask(i) {
+  data.tasks.splice(i, 1);
+  saveData();
+  renderTasks();
+}
+
+function updateStats() {
+  let today = new Date().toDateString();
+  let weekStart = new Date();
+  weekStart.setDate(weekStart.getDate() - 7);
+
+  let todayMins = data.studyLog.filter(log => log.date === today).reduce((a,b) => a + b.minutes, 0);
+  let weekMins = data.studyLog.filter(log => new Date(log.date) >= weekStart).reduce((a,b) => a + b.minutes, 0);
+
+  document.getElementById('todayHours').textContent = (todayMins / 60).toFixed(1);
+  document.getElementById('weekHours').textContent = (weekMins / 60).toFixed(1);
+}
+
+// تحميل البيانات اول ما تفتح الصفحة
+renderSubjects();
+renderTasks();
+updateStats();
+updateDisplay();
+</script>
 </body>
 </html>
