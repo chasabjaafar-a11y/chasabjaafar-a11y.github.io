@@ -44,19 +44,28 @@
   }
   
   .btn {
-    display: inline-block;
-    background: white;
-    color: #667eea;
+    display: block;
     padding: 12px 30px;
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
     transition: 0.3s;
+    margin-bottom: 15px;
   }
   
   .btn:hover {
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+  }
+  
+  .whatsapp {
+    background: white;
+    color: #667eea;
+  }
+  
+  .facebook {
+    background: #1877f2;
+    color: white;
   }
 </style>
 </head>
@@ -64,7 +73,9 @@
   <div class="card">
     <h1>اهلا بك</h1>
     <p>هاي صفحتي الاولى على الانترنت</p>
-    <a href="https://wa.me/" class="btn">تواصل وياي</a>
+    
+    <a href="https://wa.me/" class="btn whatsapp">تواصل وياي واتساب</a>
+    <a href="https://facebook.com" class="btn facebook">صفحتي بالفيس</a>
   </div>
 </body>
 </html>
